@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Warga;
 use App\User;
+use App\Notifikasi;
 use Illuminate\Support\Facades\Validator;
 
 class petugasdatacontroller extends Controller
@@ -85,5 +86,58 @@ class petugasdatacontroller extends Controller
 
         }
 
+    }
+
+
+    public function historiUserPetugas(Request $request){
+        if($request->user()->desa_id){
+            $data = Notifikasi::where('status', 0)
+            ->where('desa_id', $request->user()->desa_id)->get();
+            return $data;
+            // return response([
+            //     'success' => true,
+            //     'message' => 'List Data ID Desa',
+            //     'data' => $data
+            // ], 200);
+        }else{
+            return response([
+                'data' => 'NotFound'
+            ], 401);
+        }
+    }
+
+    public function laporanUserPetugas(Request $request){
+        if($request->user()->desa_id){
+            $data = Notifikasi::where('status', 1)
+            ->where('desa_id', $request->user()->desa_id)->get();
+            return $data;
+            // return response([
+            //     'success' => true,
+            //     'message' => 'List Data ID Desa',
+            //     'data' => $data
+            // ], 200);
+        }else{
+            return response([
+                'data' => 'NotFound'
+            ], 401);
+        }
+    }
+
+    public function angkutLaporan(Request $request){
+        $post = Notifikasi::whereId($request->input('id'))->update([
+            'status'    => 0,
+        ]);
+
+        if ($post) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Laporan Berhasil DIangkut!',
+            ], 200);
+        } else {
+            return response()->json([
+                'success' => false,
+                'message' => 'Laporan Gagal Diangkut!',
+            ], 401);
+        }
     }
 }

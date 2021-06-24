@@ -21,10 +21,14 @@ class adminDataController extends Controller
         ]);
 
         $email = $request->email;
-        //$ds = DB::select("SELECT email FROM users where email='$email'");
+        $iddesa = $request->id;
         $ds = DB::table('users')->where('email', '=', $email)->count();
+        $id = DB::table('users')->where('desa_id', '=', $iddesa)->count();
+        //$desadftar = DB::table('users')->where('desa_id', '=', $iddesa)->where('status', '=', 1);
         if($ds > 0){
             return redirect('/data-desa')->with('warning', 'Anda tidak bisa menambahkan Account, Email Sudah Terdaftar');
+        }else if($id > 0){
+            return redirect('/data-desa')->with('warning', 'Desa Ini Sudah Terdaftar dan Sudah Memiliki Akun.');
         }else{
             $desa = Desa::where('id',$request->id)
             ->update([

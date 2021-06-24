@@ -18,10 +18,10 @@ class CreateTableNotifikasi extends Migration
             $table->unsignedBigInteger('desa_id');
             $table->foreign('desa_id')->references('id')->on('desa');
             $table->string('email');
-            $table->foreign('email')->references('email')->on('warga');
-            $table->string('latitude');
-            $table->string('longitude');
-            $table->boolean('status');
+            $table->foreign('email')->references('email')->on('users');
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
+            $table->string('status');
             $table->timestamps();
             $table->softDeletes();
         });

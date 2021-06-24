@@ -40,7 +40,7 @@ class notifikasiController extends Controller
         $mytime=time::now();
         $date=$mytime->toRfc850String();
         $today= substr($date, 0, strrpos($date, ","));
-        $sunday     = DB::table('jadwal')->where('sunday', '=', $today)->where('desa_id', '=', $desa_id)->count();
+        $sunday     = DB::table('jadwal')->where('sunday', '=', $today)->where('desa_id', '=', "$desa_id")->count();
         $monday     = DB::table('jadwal')->where('monday', '=', $today)->where('desa_id', '=', $desa_id)->count();
         $tuesday    = DB::table('jadwal')->where('tuesday', '=', $today)->where('desa_id', '=', $desa_id)->count();
         $wednesday  = DB::table('jadwal')->where('wednesday', '=', $today)->where('desa_id', '=', $desa_id)->count();
@@ -51,13 +51,13 @@ class notifikasiController extends Controller
         $email = $request->email;
         //$ds = DB::select("SELECT email FROM users where email='$email'");
         $ds = DB::table('notifikasi')->where('email', '=', $email)->where('status', '1')->count();
-        if($ds > 0){
-            return response()->json([
-                'success' => false,
-                'message' => 'Anda Sudah Melapor, Tunggu hingga Laporan diproses!',
-                'hari' => $today
-            ], 401);
-        }else{
+        // if($ds > 0){
+        //     return response()->json([
+        //         'success' => false,
+        //         'message' => 'Anda Sudah Melapor, Tunggu hingga Laporan diproses!',
+        //         'hari' => $today
+        //     ], 402);
+        // }else{
             if ($sunday ) {
                 if($validator->fails()) {
                     return response()->json([
@@ -272,8 +272,10 @@ class notifikasiController extends Controller
                 return response()->json([
                     'success' => false,
                     'message' => 'Jadwal Laporan Anda Bukan Hari ini.!',
+                    'cek'=>$mytime,
+                    'ini'=> $date
                 ], 401);
             }
         }
     }
-}
+

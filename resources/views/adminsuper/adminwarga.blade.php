@@ -25,14 +25,14 @@
                           <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                               <thead>
                                   <tr>
-                                      <th>ID</th>
+                                      <th>No</th>
                                       <th>ID Desa</th>
                                       <th>NIK</th>
                                       <th>Nama</th>
                                       <th>Email</th>
                                       <th>RT/RW</th>
-                                      <th>Lat/Long</th>
-                                      <th>Pilihan</th>
+                                      <!--<th>Lat/Long</th>
+                                      <th>Pilihan</th>-->
                                   </tr>
                               </thead>
                               <tbody>
@@ -44,10 +44,10 @@
                                       <td>{{$w->namawarga}}</td>
                                       <td>{{$w->email}}</td>
                                       <td>{{$w->rt}}/{{$w->rw}}</td>
-                                      <td>{{$w->latittude}},{{$w->longitude}}</td>
+                                      <!--<td>{{$w->latittude}},{{$w->longitude}}</td>
                                       <td class="text-center">
                                         <a class="btn btn-danger btn-sm">Hapus</a>
-                                      </td>
+                                      </td>-->
                                   </tr>
                                   @endforeach
                               </tbody>

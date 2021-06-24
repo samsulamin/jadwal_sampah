@@ -37,7 +37,7 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>No</th>
                                         <th>ID Desa</th>
                                         <th>Email</th>
                                         <th>Pilihan</th>
@@ -50,7 +50,7 @@
                                         <td>{{$desa->desa_id}}</td>
                                         <td>{{$desa->email}}</td>
                                         <td class="text-center">
-                                            <a href="{{url('edit-desa-akun')}}/{{$desa->id}}" class="btn btn-warning btn-sm">Edit</a>
+                                            <a href="{{url('edit-desa-akun')}}/{{$desa->desa_id}}" class="btn btn-warning btn-sm">Edit</a>
                                             <a href="{{url('hapus-desa-akun')}}/{{$desa->desa_id}}" class="btn btn-danger btn-sm">Hapus</a>
                                         </td>
                                     </tr>

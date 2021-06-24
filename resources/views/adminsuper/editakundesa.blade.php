@@ -31,7 +31,7 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <form action="{{url('edit-desa-akun')}}/{{$desa->id}}" method="post"> 
+                            <form action="{{url('edit-desa-akun')}}/{{$desa->desa_id}}" method="post"> 
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="desa">Desa</label>

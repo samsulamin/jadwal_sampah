@@ -37,4 +37,15 @@ Route::group(['middleware' => ['auth:api']], function(){
     Route::get('datapengajuan', 'api\petugasdatacontroller@datapengajuan');
     Route::post('updatepengajuan', 'api\petugasdatacontroller@updatePengajuan');
 
+
+    Route::get('historilaporan', 'api\petugasdatacontroller@historiUserPetugas');
+    Route::get('laporanmasuk', 'api\petugasdatacontroller@laporanUserPetugas');
+    Route::post('angkutlaporan', 'api\petugasdatacontroller@angkutLaporan');
+
 });
+Route::group(['middleware' => ['auth:api']], function(){
+    Route::get('notifikasi', 'api\wargaController@histori');
+
+});
+
+//warga after login
