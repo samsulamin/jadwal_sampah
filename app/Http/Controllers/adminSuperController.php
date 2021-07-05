@@ -54,4 +54,12 @@ class adminSuperController extends Controller
         return view('adminsuper.adminprofile', compact('countdesa','countwarga', 'countpetugas'));
     }
 
+
+    public function regisDesa()
+    {
+        $desa = Desa::all();
+        $datadesa = Desa::all();
+        return view('welcome', compact('desa','datadesa'));
+    }
+
 }

@@ -13,12 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 //admin
 //Route::get('login', 'adminSuperController@login');
+Route::get('/', 'adminSuperController@regisDesa');
+Route::post('regisdesa', 'adminDataController@registrasiDesa');
 
 Route::get('dashboard', 'adminSuperController@index')->name('admin.home');
 Route::get('data-desa', 'adminSuperController@datadesa');

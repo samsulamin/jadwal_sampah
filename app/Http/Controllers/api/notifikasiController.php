@@ -58,224 +58,225 @@ class notifikasiController extends Controller
         //         'hari' => $today
         //     ], 402);
         // }else{
-            if ($sunday ) {
-                if($validator->fails()) {
-                    return response()->json([
-                        'success' => false,
-                        'message' => 'Silahkan Isi Bidang Yang Kosong',
-                        'data'    => $validator->errors()
-                    ],401);
-
-                }else {
-                    $notif = Notifikasi::create([
-                        'email'   => $request->input('email'),
-                        'desa_id'  => $request->input('desa_id'),
-                        //'latitude'  => $request->input('latitude'),
-                        //'longitude' => $request->input('longitude'),
-                        'status'    => '1'
-                    ]);
-                    if ($notif) {
-                        return response()->json([
-                            'success' => true,
-                            'message' => 'Post Berhasil Disimpan!',
-                            'data'    => $notif,
-                            'hari'    => $today
-                        ], 200);
-                    } else {
-                        return response()->json([
-                            'success' => false,
-                            'message' => 'Post Gagal Disimpan!',
-                        ], 401);
-                    }
-                }
-            }  else if ($monday ) {
-                if($validator->fails()) {
-                    return response()->json([
-                        'success' => false,
-                        'message' => 'Silahkan Isi Bidang Yang Kosong',
-                        'data'    => $validator->errors()
-                    ],401);
-
-                }else {
-                    $notif = Notifikasi::create([
-                        'email'   => $request->input('email'),
-                        'desa_id'  => $request->input('desa_id'),
-                        //'latitude'  => $request->input('latitude'),
-                        //'longitude' => $request->input('longitude'),
-                        'status'    => '1'
-                    ]);
-                    if ($notif) {
-                        return response()->json([
-                            'success' => true,
-                            'message' => 'Post Berhasil Disimpan!',
-                            'data'    => $notif,
-                            'hari'    => $today
-                        ], 200);
-                    } else {
-                        return response()->json([
-                            'success' => false,
-                            'message' => 'Post Gagal Disimpan!',
-                        ], 401);
-                    }
-                }
-            } else if ($tuesday) {
-                if($validator->fails()) {
-                    return response()->json([
-                        'success' => false,
-                        'message' => 'Silahkan Isi Bidang Yang Kosong',
-                        'data'    => $validator->errors()
-                    ],401);
-
-                }else {
-                    $notif = Notifikasi::create([
-                        'email'   => $request->input('email'),
-                        'desa_id'  => $request->input('desa_id'),
-                        //'latitude'  => $request->input('latitude'),
-                        //'longitude' => $request->input('longitude'),
-                        'status'    => '1'
-                    ]);
-                    if ($notif) {
-                        return response()->json([
-                            'success' => true,
-                            'message' => 'Post Berhasil Disimpan!',
-                            'data'    => $notif,
-                            'hari'    => $today
-                        ], 200);
-                    } else {
-                        return response()->json([
-                            'success' => false,
-                            'message' => 'Post Gagal Disimpan!',
-                        ], 401);
-                    }
-                }
-            } else if ($wednesday ) {
-                if($validator->fails()) {
-                    return response()->json([
-                        'success' => false,
-                        'message' => 'Silahkan Isi Bidang Yang Kosong',
-                        'data'    => $validator->errors()
-                    ],401);
-
-                }else {
-                    $notif = Notifikasi::create([
-                        'email'   => $request->input('email'),
-                        'desa_id'  => $request->input('desa_id'),
-                        //'latitude'  => $request->input('latitude'),
-                        //'longitude' => $request->input('longitude'),
-                        'status'    => '1'
-                    ]);
-                    if ($notif) {
-                        return response()->json([
-                            'success' => true,
-                            'message' => 'Post Berhasil Disimpan!',
-                            'data'    => $notif,
-                            'hari'    => $today
-                        ], 200);
-                    } else {
-                        return response()->json([
-                            'success' => false,
-                            'message' => 'Post Gagal Disimpan!',
-                        ], 401);
-                    }
-                }
-            } else if ($thrusday ) {
-                if($validator->fails()) {
-                    return response()->json([
-                        'success' => false,
-                        'message' => 'Silahkan Isi Bidang Yang Kosong',
-                        'data'    => $validator->errors()
-                    ],401);
-
-                }else {
-                    $notif = Notifikasi::create([
-                        'email'   => $request->input('email'),
-                        'desa_id'  => $request->input('desa_id'),
-                        //'latitude'  => $request->input('latitude'),
-                        //'longitude' => $request->input('longitude'),
-                        'status'    => '1'
-                    ]);
-                    if ($notif) {
-                        return response()->json([
-                            'success' => true,
-                            'message' => 'Post Berhasil Disimpan!',
-                            'data'    => $notif,
-                            'hari'    => $today
-                        ], 200);
-                    } else {
-                        return response()->json([
-                            'success' => false,
-                            'message' => 'Post Gagal Disimpan!',
-                        ], 401);
-                    }
-                }
-            } else if ($friday ) {
-                if($validator->fails()) {
-                    return response()->json([
-                        'success' => false,
-                        'message' => 'Silahkan Isi Bidang Yang Kosong',
-                        'data'    => $validator->errors()
-                    ],401);
-
-                }else {
-                    $notif = Notifikasi::create([
-                        'email'   => $request->input('email'),
-                        'desa_id'  => $request->input('desa_id'),
-                        //'latitude'  => $request->input('latitude'),
-                        //'longitude' => $request->input('longitude'),
-                        'status'    => '1'
-                    ]);
-                    if ($notif) {
-                        return response()->json([
-                            'success' => true,
-                            'message' => 'Post Berhasil Disimpan!',
-                            'data'    => $notif,
-                            'hari'    => $today
-                        ], 200);
-                    } else {
-                        return response()->json([
-                            'success' => false,
-                            'message' => 'Post Gagal Disimpan!',
-                        ], 401);
-                    }
-                }
-            } else if ($saturday ) {
-                if($validator->fails()) {
-                    return response()->json([
-                        'success' => false,
-                        'message' => 'Silahkan Isi Bidang Yang Kosong',
-                        'data'    => $validator->errors()
-                    ],401);
-
-                }else {
-                    $notif = Notifikasi::create([
-                        'email'   => $request->input('email'),
-                        'desa_id'  => $request->input('desa_id'),
-                        //'latitude'  => $request->input('latitude'),
-                        //'longitude' => $request->input('longitude'),
-                        'status'    => '1'
-                    ]);
-                    if ($notif) {
-                        return response()->json([
-                            'success' => true,
-                            'message' => 'Post Berhasil Disimpan!',
-                            'data'    => $notif,
-                            'hari'    => $today
-                        ], 200);
-                    } else {
-                        return response()->json([
-                            'success' => false,
-                            'message' => 'Post Gagal Disimpan!',
-                        ], 401);
-                    }
-                }
-            }else{
+        if ($sunday ) {
+            if($validator->fails()) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Jadwal Laporan Anda Bukan Hari ini.!',
-                    'cek'=>$mytime,
-                    'ini'=> $date
-                ], 401);
+                    'message' => 'Silahkan Isi Bidang Yang Kosong',
+                    'data'    => $validator->errors()
+                ],401);
+
+            }else {
+                $notif = Notifikasi::create([
+                    'email'   => $request->input('email'),
+                    'desa_id'  => $request->input('desa_id'),
+                    'latitude'  => $request->input('latitude'),
+                    'longitude' => $request->input('longitude'),
+                    'status'    => '1'
+                ]);
+                if ($notif) {
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Post Berhasil Disimpan!',
+                        'data'    => $notif,
+                        'hari'    => $today
+                    ], 200);
+                } else {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Post Gagal Disimpan!',
+                    ], 401);
+                }
             }
+        }  else if ($monday ) {
+            if($validator->fails()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Silahkan Isi Bidang Yang Kosong',
+                    'data'    => $validator->errors()
+                ],401);
+
+            }else {
+                $notif = Notifikasi::create([
+                    'email'   => $request->input('email'),
+                    'desa_id'  => $request->input('desa_id'),
+                    'latitude'  => $request->input('latitude'),
+                    'longitude' => $request->input('longitude'),
+                    'status'    => '1'
+                ]);
+                if ($notif) {
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Post Berhasil Disimpan!',
+                        'data'    => $notif,
+                        'hari'    => $today
+                    ], 200);
+                } else {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Post Gagal Disimpan!',
+                    ], 401);
+                }
+            }
+        } else if ($tuesday) {
+            if($validator->fails()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Silahkan Isi Bidang Yang Kosong',
+                    'data'    => $validator->errors()
+                ],401);
+
+            }else {
+                $notif = Notifikasi::create([
+                    'email'   => $request->input('email'),
+                    'desa_id'  => $request->input('desa_id'),
+                    'latitude'  => $request->input('latitude'),
+                    'longitude' => $request->input('longitude'),
+                    'status'    => '1'
+                ]);
+                if ($notif) {
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Post Berhasil Disimpan!',
+                        'data'    => $notif,
+                        'hari'    => $today
+                    ], 200);
+                } else {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Post Gagal Disimpan!',
+                    ], 401);
+                }
+            }
+        } else if ($wednesday ) {
+            if($validator->fails()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Silahkan Isi Bidang Yang Kosong',
+                    'data'    => $validator->errors()
+                ],401);
+
+            }else {
+                $notif = Notifikasi::create([
+                    'email'   => $request->input('email'),
+                    'desa_id'  => $request->input('desa_id'),
+                    'latitude'  => $request->input('latitude'),
+                    'longitude' => $request->input('longitude'),
+                    'status'    => '1'
+                ]);
+                if ($notif) {
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Post Berhasil Disimpan!',
+                        'data'    => $notif,
+                        'hari'    => $today
+                    ], 200);
+                } else {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Post Gagal Disimpan!',
+                    ], 401);
+                }
+            }
+        } else if ($thrusday ) {
+            if($validator->fails()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Silahkan Isi Bidang Yang Kosong',
+                    'data'    => $validator->errors()
+                ],401);
+
+            }else {
+                $notif = Notifikasi::create([
+                    'email'   => $request->input('email'),
+                    'desa_id'  => $request->input('desa_id'),
+                    'latitude'  => $request->input('latitude'),
+                    'longitude' => $request->input('longitude'),
+                    'status'    => '1'
+                ]);
+                if ($notif) {
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Post Berhasil Disimpan!',
+                        'data'    => $notif,
+                        'hari'    => $today
+                    ], 200);
+                } else {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Post Gagal Disimpan!',
+                    ], 401);
+                }
+            }
+        } else if ($friday ) {
+            if($validator->fails()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Silahkan Isi Bidang Yang Kosong',
+                    'data'    => $validator->errors()
+                ],401);
+
+            }else {
+                $notif = Notifikasi::create([
+                    'email'   => $request->input('email'),
+                    'desa_id'  => $request->input('desa_id'),
+                    'latitude'  => $request->input('latitude'),
+                    'longitude' => $request->input('longitude'),
+                    'status'    => '1'
+                ]);
+                if ($notif) {
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Post Berhasil Disimpan!',
+                        'data'    => $notif,
+                        'hari'    => $today
+                    ], 200);
+                } else {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Post Gagal Disimpan!',
+                    ], 401);
+                }
+            }
+        } else if ($saturday ) {
+            if($validator->fails()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Silahkan Isi Bidang Yang Kosong',
+                    'data'    => $validator->errors()
+                ],401);
+
+            }else {
+                $notif = Notifikasi::create([
+                    'email'   => $request->input('email'),
+                    'desa_id'  => $request->input('desa_id'),
+                    'latitude'  => $request->input('latitude'),
+                    'longitude' => $request->input('longitude'),
+                    'status'    => '1'
+                ]);
+                if ($notif) {
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Post Berhasil Disimpan!',
+                        'data'    => $notif,
+                        'hari'    => $today
+                    ], 200);
+                } else {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Post Gagal Disimpan!',
+                    ], 401);
+                }
+            }
+        }else{
+            return response()->json([
+                'success' => false,
+                'message' => 'Jadwal Laporan Anda Bukan Hari ini.!',
+                'cek'=>$mytime,
+                'ini'=> $date
+            ], 401);
         }
     }
+
+}
 

@@ -117,5 +117,49 @@ class adminDataController extends Controller
         ]);
     	return redirect('data-desa-akun')->with('message', 'Berhasil diubah');
     }
+    public function registrasiDesa(Request $request)
+    {
+        $this->validate($request,[
+    		'email'     => 'required',
+    		'password'  => 'required',
+        ],
+        [
+            'email.required'     => 'Email Desa Harus Diisi',
+            'password.required'  => 'Password Desa Harus Diisi',
+            'password.min'       => 'Masukkan Password minimal 6 !',
+            'password.max'       => 'Masukkan Password maximal 10 !',
+        ]);
 
+        $email = $request->email;
+        $iddesa = $request->id;
+        $ds = DB::table('users')->where('email', '=', $email)->count();
+        $id = DB::table('users')->where('desa_id', '=', $iddesa)->count();
+        //$desadftar = DB::table('users')->where('desa_id', '=', $iddesa)->where('status', '=', 1);
+        
+        if($ds > 0){
+            return redirect('/')->with('warning', 'Anda tidak bisa menambahkan Account, Email Sudah Terdaftar');
+        }else if($id > 0){
+            return redirect('/')->with('warning', 'Desa Ini Sudah Terdaftar dan Sudah Memiliki Akun.');
+        }else{
+            $desa = Desa::where('id',$request->id)
+            ->update([
+                'desa'         => $request->desa,
+                'kabupaten'    => 'Kabupaten Tegal',
+                'email'        => $request->email,
+                'password'     => $request->password,
+                'status'       => 1
+            ]);
+            User::create([
+                'desa_id'   => $request->id,
+                'name'      => $request->desa,
+                'email'     => $request->email,
+                'password'  => $request->password,
+                'role'      => 'desa',
+                'status'    => 1,
+                //'api_token' => Str::random(60)
+            ]);
+        
+            return redirect('/')->with('message', 'Berhasil Menambah Akun');
+        }
+    }
 }

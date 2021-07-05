@@ -45,6 +45,7 @@ Route::group(['middleware' => ['auth:api']], function(){
 });
 Route::group(['middleware' => ['auth:api']], function(){
     Route::get('notifikasi', 'api\wargaController@histori');
+    Route::get('getProfile', 'api\wargaController@warga');
 
 });
 

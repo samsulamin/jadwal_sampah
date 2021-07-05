@@ -17,11 +17,13 @@ class CreateTableNotifikasi extends Migration
             $table->id();
             $table->unsignedBigInteger('desa_id');
             $table->foreign('desa_id')->references('id')->on('desa');
+            // $table->unsignedBigInteger('warga_id');
+            // $table->foreign('warga_id')->references('id')->on('warga');
             $table->string('email');
-            $table->foreign('email')->references('email')->on('users');
+            $table->foreign('email')->references('email')->on('warga');
             $table->string('latitude')->nullable();
             $table->string('longitude')->nullable();
-            $table->string('status');
+            $table->unsignedBigInteger('status');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -34,8 +36,6 @@ class CreateTableNotifikasi extends Migration
      */
     public function down()
     {
-        Schema::table('notifikasi', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('notifikasi');
     }
 }

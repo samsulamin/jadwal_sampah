@@ -146,4 +146,21 @@ class wargaController extends Controller
             ], 401);
         }
     }
+
+    public function warga(Request $request){
+        
+        if($request->user()->email){
+            $data = Warga::where('email', $request->user()->email)->get();
+            return $data;
+            // return response([
+            //     'success' => true,
+            //     'message' => 'List Data ID Desa',
+            //     'data' => $data
+            // ], 200);
+        }else{
+            return response([
+                'data' => 'NotFound'
+            ], 401);
+        }
+    }
 }
