@@ -7,7 +7,8 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Startmin - Bootstrap Admin Theme</title>
+      <title>Pengangkutan Sampah</title>
+      <link rel="icon" href="{{asset('vendor/img/rash.png')}}" type="image/gif" sizes="25x25">
         <!-- Bootstrap Core CSS -->
         <link href="{{asset('vendor/css/bootstrap.min.css')}}" rel="stylesheet">
         <!-- MetisMenu CSS -->

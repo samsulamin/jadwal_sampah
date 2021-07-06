@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Pengangkutan Sampah</title>
+      <link rel="icon" href="{{asset('vendor/img/rash.png')}}" type="image/gif" sizes="25x25">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
