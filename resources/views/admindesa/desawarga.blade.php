@@ -33,7 +33,7 @@
                                       <th>Email</th>
                                       <th>RT/RW</th>
                                       <th>Lat/Long</th>
-                                      <th>Pilihan</th>
+                                      <!--<th>Pilihan</th>-->
                                   </tr>
                               </thead>
                               <tbody>
@@ -46,9 +46,9 @@
                                       <td>{{$w->email}}</td>
                                       <td>{{$w->rt}}/{{$w->rw}}</td>
                                       <td>{{$w->latittude}},{{$w->longitude}}</td>
-                                      <td class="text-center">
+                                      <!--<td class="text-center">
                                         <a class="btn btn-danger btn-sm">Hapus</a>
-                                      </td>
+                                      </td>-->
                                   </tr>
                                   @endforeach
                               </tbody>

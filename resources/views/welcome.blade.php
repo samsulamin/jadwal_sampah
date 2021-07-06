@@ -185,13 +185,13 @@
             <div class="site-wrapper-inner">
                 <div class="cover-container">
                     <div class="masthead clearfix">
-                        <div class="inner">
+                        <!--<div class="inner">
                             <ul class="nav masthead-nav">
                                 <li>
                                 <a data-toggle="modal" data-target="#staticBackdrop"><i class='fas fa-user-plus'></i> Registrasi Desa</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="inner cover">
                               <!-- /.row -->
@@ -235,12 +235,12 @@
                 <form action="{{url('regisdesa')}}" method="post">
                     {{ csrf_field() }}
                     <div class="modal-content">
-                        <div class="modal-header" style="color:black;">
+                        <!--<div class="modal-header" style="color:black;">
                             <h5 class="modal-title" id="staticBackdropLabel">Registrasi Warga</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
-                        </div>
+                        </div>-->
                         <div class="modal-body" style="color:black;">
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Desa</label>
