@@ -133,7 +133,7 @@ class wargaController extends Controller
     public function histori(Request $request){
         
         if($request->user()->email){
-            $data = Notifikasi::where('email', $request->user()->email)->get();
+            $data = Notifikasi::where('email', $request->user()->email)->orderBy('id', 'desc')->get();
             return $data;
             // return response([
             //     'success' => true,
