@@ -124,7 +124,7 @@ class petugasdatacontroller extends Controller
         // }
 // if($request->user()->desa_id){
             $id_desa = $request->user()->desa_id;
-            $notifikasi = Notifikasi::with('warga')->where('status', 0)->where('desa_id', $id_desa)->get();
+            $notifikasi = Notifikasi::with('warga')->where('status', 1)->where('desa_id', $id_desa)->get();
             //$notifikasi = Notifikasi::all();
             $latlng_origin = '-6.920302' . ',' . '109.160965';
             $latlng_destination = '';
