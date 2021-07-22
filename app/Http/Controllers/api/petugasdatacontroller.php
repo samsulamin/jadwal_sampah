@@ -92,8 +92,9 @@ class petugasdatacontroller extends Controller
 
     public function historiUserPetugas(Request $request){
         if($request->user()->desa_id){
-            $data = Notifikasi::where('status', 0)
-            ->where('desa_id', $request->user()->desa_id)->get();
+            $data = Notifikasi::where('desa_id', $request->user()->desa_id)->get();
+            // $data = Notifikasi::where('status', 0)
+            // ->where('desa_id', $request->user()->desa_id)->get();
             return $data;
             // return response([
             //     'success' => true,
@@ -124,7 +125,7 @@ class petugasdatacontroller extends Controller
         // }
 // if($request->user()->desa_id){
             $id_desa = $request->user()->desa_id;
-            $notifikasi = Notifikasi::with('warga')->where('status', 1)->where('desa_id', $id_desa)->get();
+            $notifikasi = Notifikasi::with('warga')->where('status', 0)->where('desa_id', $id_desa)->get();
             //$notifikasi = Notifikasi::all();
             $latlng_origin = '-6.920302' . ',' . '109.160965';
             $latlng_destination = '';
