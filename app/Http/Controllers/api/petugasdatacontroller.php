@@ -92,9 +92,8 @@ class petugasdatacontroller extends Controller
 
     public function historiUserPetugas(Request $request){
         if($request->user()->desa_id){
-            $data = Notifikasi::where('desa_id', $request->user()->desa_id)->get();
-            // $data = Notifikasi::where('status', 0)
-            // ->where('desa_id', $request->user()->desa_id)->get();
+            $data = Notifikasi::where('status', 0)
+            ->where('desa_id', $request->user()->desa_id)->get();
             return $data;
             // return response([
             //     'success' => true,
