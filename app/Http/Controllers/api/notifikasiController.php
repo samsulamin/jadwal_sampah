@@ -72,7 +72,7 @@ class notifikasiController extends Controller
                     'desa_id'  => $request->input('desa_id'),
                     'latitude'  => $request->input('latitude'),
                     'longitude' => $request->input('longitude'),
-                    'status'    => '1'
+                    'status'    => '0'
                 ]);
                 if ($notif) {
                     return response()->json([
@@ -102,7 +102,7 @@ class notifikasiController extends Controller
                     'desa_id'  => $request->input('desa_id'),
                     'latitude'  => $request->input('latitude'),
                     'longitude' => $request->input('longitude'),
-                    'status'    => '1'
+                    'status'    => '0'
                 ]);
                 if ($notif) {
                     return response()->json([
@@ -132,7 +132,7 @@ class notifikasiController extends Controller
                     'desa_id'  => $request->input('desa_id'),
                     'latitude'  => $request->input('latitude'),
                     'longitude' => $request->input('longitude'),
-                    'status'    => '1'
+                    'status'    => '0'
                 ]);
                 if ($notif) {
                     return response()->json([
@@ -162,7 +162,7 @@ class notifikasiController extends Controller
                     'desa_id'  => $request->input('desa_id'),
                     'latitude'  => $request->input('latitude'),
                     'longitude' => $request->input('longitude'),
-                    'status'    => '1'
+                    'status'    => '0'
                 ]);
                 if ($notif) {
                     return response()->json([
@@ -192,7 +192,7 @@ class notifikasiController extends Controller
                     'desa_id'  => $request->input('desa_id'),
                     'latitude'  => $request->input('latitude'),
                     'longitude' => $request->input('longitude'),
-                    'status'    => '1'
+                    'status'    => '0'
                 ]);
                 if ($notif) {
                     return response()->json([
@@ -222,7 +222,7 @@ class notifikasiController extends Controller
                     'desa_id'  => $request->input('desa_id'),
                     'latitude'  => $request->input('latitude'),
                     'longitude' => $request->input('longitude'),
-                    'status'    => '1'
+                    'status'    => '0'
                 ]);
                 if ($notif) {
                     return response()->json([
@@ -252,7 +252,7 @@ class notifikasiController extends Controller
                     'desa_id'  => $request->input('desa_id'),
                     'latitude'  => $request->input('latitude'),
                     'longitude' => $request->input('longitude'),
-                    'status'    => '1'
+                    'status'    => '0'
                 ]);
                 if ($notif) {
                     return response()->json([
