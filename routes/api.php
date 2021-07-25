@@ -34,7 +34,7 @@ Route::post('loginwarga', 'api\logincontroller@loginwarga');
 
 Route::group(['middleware' => ['auth:api']], function(){
 
-    Route::get('datapengajuan', 'api\petugasdatacontroller@datapengajuan');
+    Route::get('datapengajuan', 'api\petugasdatacontroller@laporanmasuk');
     Route::post('updatepengajuan', 'api\petugasdatacontroller@updatePengajuan');
 
 
