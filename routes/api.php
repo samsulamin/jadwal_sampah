@@ -39,7 +39,8 @@ Route::group(['middleware' => ['auth:api']], function(){
 
 
     Route::get('historilaporan', 'api\petugasdatacontroller@historiUserPetugas');
-    Route::get('laporanmasuk', 'api\petugasdatacontroller@laporanUserPetugas');
+    //Route::get('laporanmasuk', 'api\petugasdatacontroller@laporanUserPetugas');
+    Route::get('mylaporan', 'api\petugasdatacontroller@laporanmasuk');
     Route::post('angkutlaporan', 'api\petugasdatacontroller@angkutLaporan');
 
 });

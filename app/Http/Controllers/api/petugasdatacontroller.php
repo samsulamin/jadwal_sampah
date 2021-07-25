@@ -102,7 +102,19 @@ class petugasdatacontroller extends Controller
         }
     }
 
-    public function laporanUserPetugas(Request $request){
+    // public function laporanUserPetugas(Request $request){
+    //     if($request->user()->desa_id){
+    //         $data = Notifikasi::with('warga')->where('status', 0)
+    //         ->where('desa_id', $request->user()->desa_id)->get();
+    //         return $data;
+    //     }else{
+    //         return response([
+    //             'data' => 'NotFound'
+    //         ], 401);
+    //     }
+    // }
+
+    public function laporanmasuk(Request $request){
         if($request->user()->desa_id){
             $data = Notifikasi::with('warga')->where('status', 0)
             ->where('desa_id', $request->user()->desa_id)->get();
@@ -113,6 +125,7 @@ class petugasdatacontroller extends Controller
             ], 401);
         }
     }
+
     public function angkutLaporan(Request $request){
         $post = Notifikasi::whereId($request->input('id'))->update([
             'status'    => '1'
