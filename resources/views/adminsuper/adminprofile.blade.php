@@ -92,7 +92,8 @@
                 <!-- /.panel-heading -->
                 <div class="panel-body">
                     <h4>{{Auth::user()->name}}</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a commodo mauris, vitae vulputate mi. Nulla vel ligula felis. Suspendisse potenti. Mauris odio tellus, congue vel est quis, tincidunt pharetra augue. Pellentesque vehicula finibus mauris a sagittis.</p>
+                    <p>
+                    Kabupaten Tegal (Badan Pusat Statistik Kabupaten Tegal, 2017) adalah salah satu Kabupaten yang ada di Jawa Tengah denganjumlah penduduk pada tahun 2016sebanyak 1.429.386jiwa, menurut BPS Kabupaten Tegal. Sedangkan jumlah produksi sampah perhari menurut data dari BPSKabupaten Tegal adalah sebanyak 458m3 setiapharinya. Pengolahan sampah eksisting yang ada di Kabupaten Tegal yaitu menggunakan sistem open dumping.Keuntungan utama dari sistem ini adalah murah dan sederhana. Dari dua keuntungan tersebut, mengakibatkan banyak kerugian yang didapat dari sistem ini, dimulai dari tanah untuk menimbun banyaknya sampah yang diproduksi masyarakat setiap harinya hingga potensi bakteri, virus penyakit, gas yang mudah meledak yang dihasilkan dari penumpukan sampah selama bertahun-tahun tanpa ada tindak lanjut lebih dari sampahtersebut.</p>
                 </div>
                 <!-- /.panel-body -->
             </div>
